@@ -5,7 +5,7 @@ function getJSONMarkers() {
 	var locations = [
     {
       "name": "Abanndoned Well",
-      "location": [41.2503, -75.8794],
+      "location": [40.378193,16.4399538],
     }
 	]
 
@@ -38,16 +38,24 @@ function loadMap() {
 function drawMarkers(map) {
 
  // Load JSON Data
- const markers = null; // call getJSONMarkers, parse it, and store the
+ const markers = getJSONMarkers(obj.drawMarkers); // call getJSONMarkers, parse it, and store the
  											 // resulting object in markers
 
 
   // Loop through JSON structure to get locations
   for(marker of markers) {
-    latitude = null; // replace null with the latitude of your location
-    longitude = null; // replace null with the longitude of your location
-    message = null; // replace this with the text about your location
+    latitude = 40.378193; // replace null with the latitude of your location
+    longitude = 16.439954; // replace null with the longitude of your location
+    message = Craco Italy; // replace this with the text about your location
 
     L.marker({lat: latitude, lon: longitude}).bindPopup(message).addTo(map);
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	2 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<script defer src="map.js" type="text/javascript"></script>
+	<body onload = "loadMap()>
+	<div id="map" style="height:400px"></div>
+
   }
+
+
 }
